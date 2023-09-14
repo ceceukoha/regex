@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RegExp Assignment</title>
+</head>
+<body>
+  <script>
+        //1a. Cat and car
+    const regex = /ca[rt]/;
+    console.log(regex.test("car"));
+    console.log(regex.test("cat"));
+
+
+       //1b. pop and prop
+    const regex1 = /p[op]/;
+    console.log(regex1.test("pop"));
+    console.log(regex1.test("prop"));
+
+
+       //1c. ferret, ferry, and ferrari
+    const regex2 = /ferr[ey]|ferret/;
+    console.log(regex2.test("ferret"));
+    console.log(regex2.test("ferry"));
+    console.log(regex2.test("ferrari"));
+
+
+
+       //1d.Any word ending in ious
+    const regex3= /\w+ious\b/;
+    console.log(regex3.test("superstitious"));
+    console.log(regex3.test("unpretentious"));
+    console.log(regex3.test("pretentious"));
+
+        //1e. A whitespace character followed by a period, comma, colon, or semicolon
+    const regex4 = /\s(?=[:;,.])/;
+    console.log(regex4.test(" ."));
+    console.log(regex4.test("\t,"));
+    console.log(regex4.test("text:"));
+
+        //1f.A word longer than six letters
+    const regex5 = /\w{7,}/;
+    console.log(regex5.test("tiidelab"));
+    console.log(regex5.test("ccat"));
+
+        //1g. A word without the letter e (or E)
+    const regex6 = /[^eE\s]+/;
+    console.log(regex6.test("aerosoft"));
+    console.log(regex6.test("Energy"));
+    console.log(regex6.test("somalia"));
+
+        //2. Quotting style
+
+
+        //3.Number Again
+    const regex7 = /^[+-]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][+-]?\d+)?$/;
+    console.log(regex7.test(".");
+  </script>
